@@ -1,0 +1,26 @@
+.header{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    background: rgb(253, 182, 182);
+    border: 1px solid white;
+}
+
+.list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    &__item{
+        cursor: pointer;
+        &--name{
+            margin-left: 80%;
+            width: auto;
+        }
+        &--exit{
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.am{
+    &__footer{
+        width: 100vw;
+        height: 8vh;
+        position: absolute;
+        bottom: 0;
+        border: 1px solid white;
+        background: gray;
+        text-align: center;
+        &--content{
+            display: block;
+            margin-top: 2.5vh;
+        }
+    }
+}

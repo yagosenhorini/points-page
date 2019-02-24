@@ -3,6 +3,7 @@ import axios from 'axios'
 import Navbar from './navbar'
 import Points from './points'
 import '../css/app.scss'
+import Footer from './footer';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -24,7 +25,8 @@ export default class App extends React.Component {
         return (
             <section>
                 <Navbar key={points.id} name={name} />
-                <Points points={points} />
+                <Points name={name} points={points} />
+                <Footer date={new Date().getFullYear()}/>
             </section>
         )
     }

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "acervo-points",
+    "default": "acervo-points"
+  }
+}

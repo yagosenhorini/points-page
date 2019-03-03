@@ -4,11 +4,31 @@ import Navbar from './navbar'
 import Points from './points'
 import '../css/app.scss'
 import Footer from './footer';
+import image from '../images/beautyclose.jpg';
+import lipstick from '../images/lipstick.jpg';
 
+
+const Image = () => {
+    return (
+        <div className="image">
+            <img className="image__responsive" src={image} />
+        </div>
+    )
+}
+
+const LipstickImg = () =>{
+    return(
+        <div className="am-img">
+            <img src={lipstick} className="am-img__responsive" />
+        </div>
+    )
+}
 
 export default class App extends React.Component {
     constructor(props) {
         super(props)
+        this.boxRef = React.createRef();
+        this.changeClass = this.changeClass.bind(this);
         this.state = {
             points: []
         }
@@ -22,13 +42,11 @@ export default class App extends React.Component {
     }
 
     changeClass(e) {
-        let item = document.querySelectorAll('.am-list__item');
-        for (let i = 0; i < item.length; i++) {
-            if (item[i].classList.contains('is-active')) {
-                item[i].classList.remove('is-active');
-            } else {
-                e.target.classList.add(`is-active`);
-            }
+        if (this.boxRef.current.classList.contains('is-active')) {
+            this.boxRef.current.classList.toggle('is-active');
+        }
+        else {
+            this.boxRef.current.classList.add('is-active')
         }
     }
 
@@ -38,27 +56,33 @@ export default class App extends React.Component {
         return (
             <section>
                 <Navbar key={points.id} name={name} />
-                <Points name={name} points={points} />
+                <Image />
+                <section className="am-links">
                 <ul className="am-list">
-                    <li onClick={this.changeClass} className="am-list__item is-active">Como Funciona:</li>
-                    <li onClick={this.changeClass} className="am-list__item">Acumule seus pontos:</li>
-                    <li onClick={this.changeClass} className="am-list__item">Utilize seus pontos para trocar por brindes!</li>
-                    <li onClick={this.changeClass} className="am-list__item">Vire cliente VIP Acervo!</li>
+                    <li ref={this.boxRef} onClick={this.changeClass} className="am-list__item">Como Funciona:
+                        <p className="am-list__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cum. Ipsam numquam hic ipsum aliquam vel perspiciatis dignissimos? Soluta eaque enim voluptas aut doloremque explicabo ipsa. Perspiciatis dolorem optio eligendi.
+                        </p>
+                    </li>
+                    <li ref={this.boxRef} onClick={this.changeClass} className="am-list__item">Acumule seus pontos:
+                        <p className="am-list__item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cum. Ipsam numquam hic ipsum aliquam vel perspiciatis dignissimos? Soluta eaque enim voluptas aut doloremque explicabo ipsa. Perspiciatis dolorem optio eligendi.
+                        </p>
+                    </li>
+                    <li ref={this.boxRef} onClick={this.changeClass} className="am-list__item">Troque pontos por brindes!
+                        <p className="am-list__item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cum. Ipsam numquam hic ipsum aliquam vel perspiciatis dignissimos? Soluta eaque enim voluptas aut doloremque explicabo ipsa. Perspiciatis dolorem optio eligendi.
+                        </p>
+                    </li>
+                    <li ref={this.boxRef} onClick={this.changeClass} className="am-list__item">Vire cliente VIP Acervo!
+                        <p className="am-list__item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cum. Ipsam numquam hic ipsum aliquam vel perspiciatis dignissimos? Soluta eaque enim voluptas aut doloremque explicabo ipsa. Perspiciatis dolorem optio eligendi.
+                        </p>
+                    </li>
                 </ul>
-                <ul className="banners">
-                    <li className="banners__description">
-                        <p></p>
-                    </li>
-                    <li className="banners__description">
-                        <p></p>                
-                    </li>
-                    <li className="banners__description">
-                        <p></p>
-                    </li>
-                    <li className="banners__description">
-                        <p></p>
-                    </li>
-                </ul>
+                <LipstickImg/>
+                </section>Ï
+                <Points name={name} points={points} />
                 <Footer date={new Date().getFullYear()} />
             </section>
         )

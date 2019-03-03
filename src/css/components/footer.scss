@@ -1,15 +1,17 @@
 .am{
     &__footer{
         width: 100%;
-        height: 8vh;
-        position: absolute;
-        bottom: 0;
-        border: 1px solid white;
-        background: gray;
+        height: 5vh;
+        position: relative;
+        top: 0px;
+        border-top: 1px solid gold;
+        background: white;
         text-align: center;
+        margin-top: 0px;
         &--content{
+            color: purple;
             display: block;
-            padding-top: 2.5vh;
+            padding-top: 7px;
         }
     }
 }

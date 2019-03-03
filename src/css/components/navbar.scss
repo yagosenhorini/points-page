@@ -1,9 +1,10 @@
 .header{
     width: 100%;
-    height: 60px;
-    padding: 20px;
-    background: rgb(253, 182, 182);
-    border: 1px solid white;
+    height: 40px;
+    padding: 10px 20px;
+    background: white;
+    border-bottom: 1px solid gold;
+    color: purple;
 }
 
 .list{
@@ -15,6 +16,7 @@
     list-style: none;
     &__item{
         cursor: pointer;
+        color: purple;
         &--name{
             margin-left: 80%;
             width: auto;
@@ -26,14 +28,15 @@
 }
 
 .navmenu{
-    width: 100vw;
+    width: 100%;
     height: 30px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid gold;
+    color: purple;
     &__list{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 5px 5px 0;
+        padding: 8px 5px 0;
         font-size: 14px;
     }
 }
@@ -41,5 +44,4 @@
 .item-navMenu{
     list-style: none;
     margin: 0 30px;
-
 }

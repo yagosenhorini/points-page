@@ -3,10 +3,17 @@ import '../css/components/box.scss'
 
 const Box = (props) => {
     return (
-        <div className="infoBox">
-            <h4 className="infoBox__title">{props.name}</h4>
-            <h4 className="infoBox__star"><i className="fa fa-star"></i><span className="infoBox__points">{props.points} pontos</span></h4>
-        </div>
+        <section class="informations">
+            <div className="infoBox">
+                <h4 className="infoBox__title">{props.name}</h4>
+            </div>
+            <div className="infoBox">
+                <h4 className="infoBox__star"><i className="fa fa-star"></i><span className="infoBox__points">{props.points} pontos</span></h4>
+            </div>
+            <div className="infoBox">
+                <h4 className="infoBox__star"><i className="fa fa-star"></i><span className="infoBox__points">{props.points} pontos</span></h4>
+            </div>
+        </section>
     )
 }
 

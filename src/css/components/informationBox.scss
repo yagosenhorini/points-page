@@ -1,0 +1,16 @@
+.am {
+  &-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__item {
+      font-size: 24px;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
+.is-active{
+    background: green;
+}

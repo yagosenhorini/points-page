@@ -24,3 +24,22 @@
         }
     }
 }
+
+.navmenu{
+    width: 100vw;
+    height: 30px;
+    border-bottom: 1px solid white;
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5px 5px 0;
+        font-size: 14px;
+    }
+}
+
+.item-navMenu{
+    list-style: none;
+    margin: 0 30px;
+
+}

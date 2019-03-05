@@ -1,4 +1,5 @@
 .am {
+<<<<<<< HEAD
   &-links{
     width: 100%;
     height: 250px; 
@@ -47,3 +48,20 @@
 .is-active {
   background: green;
 }
+=======
+  &-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__item {
+      font-size: 24px;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
+.is-active{
+    background: green;
+}
+>>>>>>> a191a7096c84220dc326efdc3ec3f533743145f5
